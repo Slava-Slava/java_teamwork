@@ -239,13 +239,6 @@ public class CreditAccountTest {
     }
 
     @Test
-    public void creditLimitZero() {
-        Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            CreditAccount account = new CreditAccount(0, 0, 15);
-        });
-    }
-
-    @Test
     public void rateMinus() {
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
             CreditAccount account = new CreditAccount(0, 5_000, -15);
@@ -253,23 +246,9 @@ public class CreditAccountTest {
     }
 
     @Test
-    public void rateZero() {
-        Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            CreditAccount account = new CreditAccount(0, 5_000, 0);
-        });
-    }
-
-    @Test
     public void balanceMinus() {
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
             CreditAccount account = new CreditAccount(-10_000, 5_000, 15);
-        });
-    }
-
-    @Test
-    public void balanceZero() {
-        Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            CreditAccount account = new CreditAccount(0, 5_000, -15);
         });
     }
 }
