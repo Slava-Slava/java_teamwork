@@ -85,7 +85,11 @@ public class CreditAccount extends Account {
      */
     @Override
     public int yearChange() {
-        return balance / 100 * rate;
+//old        return balance / 100 * rate;
+        if (balance > 0) {                      //new
+            return 0;                           //new
+        }                                       //new
+        return balance = balance * rate / 100;  //new
     }
 
     public int getCreditLimit() {
