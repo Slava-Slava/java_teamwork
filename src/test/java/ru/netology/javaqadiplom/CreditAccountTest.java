@@ -28,7 +28,7 @@ public class CreditAccountTest {
 
         account.add(6_000);
 
-        Assertions.assertEquals(5_000, account.getBalance());
+        Assertions.assertEquals(6_000, account.getBalance());
     }
 
     @Test
@@ -230,6 +230,7 @@ public class CreditAccountTest {
 
         Assertions.assertEquals(0, account.yearChange());
     }
+
     @Test
     public void creditLimitMinus() {
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
