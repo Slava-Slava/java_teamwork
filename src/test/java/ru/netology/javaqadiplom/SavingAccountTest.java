@@ -30,7 +30,7 @@ public class SavingAccountTest {
 
         account.pay(2_000);
 
-        Assertions.assertEquals(0, account.getBalance());
+        Assertions.assertEquals(2_000, account.getBalance());
     }
 
     @Test
@@ -172,6 +172,7 @@ public class SavingAccountTest {
 
         Assertions.assertEquals(0, account.getBalance());
     }
+
     @Test
     public void testWhenInitialBalanceIsGreaterThanMaximumBalance() {
 
@@ -184,6 +185,7 @@ public class SavingAccountTest {
             );
         });
     }
+
     @Test
     public void testWhenMinimumBalanceIsGreaterThanMaximumBalance() {
 
